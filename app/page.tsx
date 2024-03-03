@@ -5,6 +5,7 @@ import { Card, Title, Text } from '@tremor/react';
 import Search from './search';
 import UsersTable from './table';
 import Inmuebles from './Inmuebles';
+import Unidades from './Unidades';
 
 interface PartialPlan {
   id: number;
@@ -27,6 +28,7 @@ export default async function IndexPage() {
   return (
     <main className="p-4 md:p-10 mx-auto max-w-7xl">
       <Inmuebles/>
+      <Unidades />
     </main>
   );
 }
