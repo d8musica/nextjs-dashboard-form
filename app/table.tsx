@@ -7,36 +7,26 @@ import {
   TableCell,
   Text
 } from '@tremor/react';
+import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode } from 'react';
 
-interface User {
+interface PartialPlan {
   id: number;
   name: string;
-  username: string;
+  partialPlanname: string;
   email: string;
 }
 
-export default function UsersTable({ users }: { users: User[] }) {
+export default function PartialPlansTable({ partialPlans }: { partialPlans: any }) {
   return (
     <Table>
       <TableHead>
         <TableRow>
           <TableHeaderCell>Name</TableHeaderCell>
-          <TableHeaderCell>Username</TableHeaderCell>
+          <TableHeaderCell>partialPlanname</TableHeaderCell>
           <TableHeaderCell>Email</TableHeaderCell>
         </TableRow>
       </TableHead>
       <TableBody>
-        {users.map((user) => (
-          <TableRow key={user.id}>
-            <TableCell>{user.name}</TableCell>
-            <TableCell>
-              <Text>{user.username}</Text>
-            </TableCell>
-            <TableCell>
-              <Text>{user.email}</Text>
-            </TableCell>
-          </TableRow>
-        ))}
       </TableBody>
     </Table>
   );
